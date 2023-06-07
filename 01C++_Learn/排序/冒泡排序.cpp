@@ -30,5 +30,4 @@ int main(){
 
     for(auto &num : arr)
         cout << num << " ";
-    
 }

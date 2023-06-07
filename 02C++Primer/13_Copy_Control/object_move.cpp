@@ -8,6 +8,8 @@ int main(){
 
     //move函数， 返回给定对象得右值引用 
     int &&rr2 = std::move(rr1); 
+
+    //auto rr3 = std::move(rr2);
     
     int f();
     int &&rr3 = f();
