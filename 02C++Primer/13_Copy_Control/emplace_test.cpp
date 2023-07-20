@@ -56,8 +56,25 @@ void test_empalce_back(){
         vec.emplace_back(T);
     }
 }
+
+void test_reference(){
+    vector<Test> vec;
+    Test t{10,20};
+    vec.reserve(10);
+    vec.push_back(t);
+    cout << "====================" << endl;
+    vec.push_back(Test{20,20});
+    cout << "====================" << endl;
+    vec.emplace_back(Test{30,30});
+    cout << "====================" << endl;
+    vec.emplace_back(t);
+    
+}
+
 int main(){
-    test_push_back();
-    cout << "---------------------" << endl;
-    test_empalce_back();
+    // test_push_back();
+    // cout << "---------------------" << endl;
+    // test_empalce_back();
+
+    test_reference();
 }

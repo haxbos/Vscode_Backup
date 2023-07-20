@@ -3,6 +3,7 @@
 using namespace std;
 #include<string>
 
+/*注：stack 不是容器，它是容器适配器；它的底层可以是由“duque、vector、list"构成的*/
 //队列
 
 /*

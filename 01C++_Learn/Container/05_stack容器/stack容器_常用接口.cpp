@@ -2,6 +2,7 @@
 #include<stack>
 using namespace std;
 
+/*注：stack 不是容器，它是容器适配器；它的底层可以是由“duque、vector、list"构成的*/
 /*
 构造函数
 1、stack<T> stk;    //stack 采用模板类实现，stack对象的默认构造形式
