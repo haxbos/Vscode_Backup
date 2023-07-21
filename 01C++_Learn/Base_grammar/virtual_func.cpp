@@ -7,7 +7,7 @@ public:
     Base(){ cout << "Base()" << endl; }
     Base(int) {cout << "Base(int)" << endl; }
     virtual void show() { cout << "Base::show()" << endl; }
-    void show(int) {cout << "Base::show(int" << endl; }
+    void show(int) {cout << "Base::show(int)" << endl; }
     ~Base(){ cout << "~Base()" << endl; }
     //virtual ~Base(){ cout << "~Base()" << endl; }
 private:
@@ -69,7 +69,7 @@ void test3(){
 }
 
 int main(){
-    //test();
+    test();
     //test2();
-    test3();
+    //test3();
 }

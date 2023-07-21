@@ -4,6 +4,7 @@
 #include <thread>
 using namespace std;
 
+#ifdef THREAD
 volatile atomic_bool flag = false;
 volatile atomic_int mycnt = 0;
 
@@ -28,5 +29,23 @@ int main(){
         t.join();
     }
     cout << mycnt << endl;
+    return 0;
+}
+#endif
+
+int main() {
+    std::atomic<int> sharedVariable(10);
+
+    int expectedValue = 10;
+    int newValue = 20;
+
+    // CAS操作，比较sharedVariable的当前值与期望值是否相等，
+    // 如果相等则将sharedVariable的值更新为newValue
+    if (sharedVariable.compare_exchange_strong(expectedValue, newValue)) {
+        std::cout << "CAS succeeded. New value of sharedVariable: " << sharedVariable << std::endl;
+    } else {
+        std::cout << "CAS failed. Current value of sharedVariable: " << sharedVariable << std::endl;
+    }
+
     return 0;
 }
