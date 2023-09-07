@@ -43,8 +43,13 @@ void test3(){
     delete p2;
 }
 
+void test4(){
+    Base p =  Derive();
+    p.show2();
+}
 int main(){
     //test();
     //test2();
-    test3();
+    //test3();
+    test4();
 }
