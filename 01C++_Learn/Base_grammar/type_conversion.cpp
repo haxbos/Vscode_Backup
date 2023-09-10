@@ -48,7 +48,7 @@ void test_reinterpret_cast(){
 
 class Base{
 public:
-    virtual void func() = 0;
+    virtual void func(){ cout << "Base::func()" << endl;}
 };
 
 class Derivel1 : public Base{
@@ -88,9 +88,12 @@ void showFunc2(Base* p){
 void test_dynamic_cast(){
     Derivel1 d1;
     Derivel2 d2;
+    Base b1;
+    showFunc(&b1);
     showFunc(&d1);
     showFunc(&d2);
     cout << "====================" << endl;
+    showFunc2(&b1);
     showFunc2(&d1);
     showFunc2(&d2);
 }
