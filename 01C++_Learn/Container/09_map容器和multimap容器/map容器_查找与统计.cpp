@@ -24,6 +24,13 @@ int main(){
     m.insert(pair<int,int>(2,20));
     printMap(m);
 
+    try{
+        cout <<"m:6 = " << m.at(6) << endl; 
+    }
+    catch(const std::out_of_range &e){
+        cout << "out_of_range: " << e.what() << endl;
+    }
+
     map<int,int>::iterator pos=m.find(3);
     if(pos!=m.end())
         cout<<"Key="<<pos->first<<"\tValue="<<pos->second<<endl;
