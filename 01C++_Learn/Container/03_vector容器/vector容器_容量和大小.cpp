@@ -27,7 +27,7 @@ int main()
     vector<int> v;
     if(v.empty())   //为真代表容器为空
     {
-        cout<<"v 为空！"<<endl;
+        cout<<"v is null!"<<endl;
     }
     for(int i=0;i<10;i++)
     {
@@ -35,9 +35,9 @@ int main()
     }
     if(!v.empty())
     {
-        cout<<"v bu为空！"<<endl;
-        cout<<"v 的容量为："<<v.capacity()<<endl;
-        cout<<"v 的大小为："<<v.size()<<endl;
+        cout<<"v is't null"<<endl;
+        cout<<"v capacity : "<<v.capacity()<<endl;
+        cout<<"v size : "<<v.size()<<endl;
     }
     PrintVector(v);
 
@@ -48,9 +48,11 @@ int main()
     //重载版本
     v.resize(15,100);   //利用重载版本，可以指定更改默认的数值，如果小于原来的小大，则没有影响
     PrintVector(v);
+    cout << "v size is 15, capacity : " << v.capacity() << endl;
 
     //小于原来的大小，超出部分会删除
     v.resize(5);
     PrintVector(v);
+    cout << "v size is 5, capacity : " << v.capacity() << endl;
 
 }
