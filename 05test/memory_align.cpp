@@ -4,6 +4,7 @@ using namespace std;
 struct Test{
     char ch;
     short st;
+    int val;
     double db;
 };
 

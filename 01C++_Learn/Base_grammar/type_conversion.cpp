@@ -3,10 +3,10 @@ using namespace std;
 
 /*
 C++ 中的4中类型转换
-const_cast: 去掉常量属性的一个类型转换
+const_cast: 去除一个指向常量对象的指针或引用的常量属性
 static_cast: 提供编译器认为安全的类型转换(没有任何联系的类型之间的转换就被否定)
 reinterpret_cast: 类似于C风格的强制类型转换
-dymanic_cast: 主要用在继承结构中，可以支持 RTTI 类型识别的上下转换
+dymanic_cast: 主要用在继承结构中，可以支持 RTTI 类型识别的上下转换，一般是以上转下（即父类转子类）
 */
 
 void test_const_cast(){
