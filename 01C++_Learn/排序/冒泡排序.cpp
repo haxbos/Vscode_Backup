@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//时间复杂度：O(n^2)
+//空间复杂度：O(1)
+//稳定排序
+
 void BubbleSort(vector<int> &input_vec)
 {
     if (input_vec.empty() || input_vec.size() == 1)

@@ -2,6 +2,11 @@
 #include <vector>
 using namespace std;
 
+//从第0个位置开始，每次选择一个最小的数，放到当前位置
+//时间复杂度：O(n^2)
+//空间复杂度：O(1)
+//不稳定排序
+
 void selectionSort(vector<int>& arr){
     int n = arr.size();
     for(int i=0; i<n; ++i){

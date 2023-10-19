@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//把一个数字插入到一个有序数组中
+//时间复杂度：O(n^2)
+//空间复杂度：O(1)
+//稳定排序
+
 void insertSort(vector<int> &arr){
     int n = arr.size();
 

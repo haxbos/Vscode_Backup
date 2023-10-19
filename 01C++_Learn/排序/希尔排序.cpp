@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//采用插入排序，先让间隔为gap的元素有序，再减小gap，直至gap为1
+//时间复杂度：O(nlogn)
+//空间复杂度：O(1)
+//不稳定排序
+
 void shellSort(vector<int> &arr){
     int len = arr.size();
     int gap = len/2;    //希尔增量
