@@ -12,16 +12,8 @@ adjacent_find(iterator beg,iterator end);
 */
 
 void test01(){
-    vector<int> v;
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
-    v.push_back(3);
-    v.push_back(3);
-    v.push_back(2);
-    v.push_back(4);
-    v.push_back(4);
-
+    vector<int> v = {1,2,3,3,3,2,4,4};
+    
     vector<int>::iterator it=adjacent_find(v.begin(),v.end());
     if(it==v.end())
         cout<<"NO"<<endl;
